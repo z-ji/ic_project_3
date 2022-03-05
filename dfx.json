@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "ic_project_3": {
+      "type": "motoko",
+      "main": "src/ic_project_3/increment_counter.mo"
+    },
+    "ic_project_3_http_request": {
+      "type": "motoko",
+      "main": "src/ic_project_3/increment_counter_http_request.mo"
+    },
+    "ic_project_3_assets": {
+      "type": "assets",
+      "source": [
+        "src/ic_project_3_assets/assets"
+      ],
+      "dependencies": [
+        "ic_project_3"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
